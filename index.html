@@ -287,6 +287,75 @@
     .dropdown.open .btn-bounce {
       animation-play-state: paused;
     }
+
+    /* ── DROPDOWN ITEM REDESIGN ── */
+    .item-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--orange);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .item-title-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .item-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      border: 1px solid;
+      white-space: nowrap;
+    }
+
+    .badge-begynder {
+      background: #ecfdf5;
+      color: #059669;
+      border-color: #a7f3d0;
+    }
+
+    .badge-medium {
+      background: #fffbeb;
+      color: #b45309;
+      border-color: #fde68a;
+    }
+
+    .dropdown-item-download {
+      flex-shrink: 0;
+      color: var(--muted);
+      opacity: 0.5;
+      transition: opacity 0.12s;
+    }
+
+    .dropdown-item:hover .dropdown-item-download {
+      opacity: 1;
+      color: var(--orange);
+    }
+
+    /* ── FOOTER ── */
+    footer a {
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-sep {
+      margin: 0 0.6rem;
+      color: var(--border);
+    }
   </style>
 </head>
 <body>
@@ -300,18 +369,28 @@
       </button>
       <div class="dropdown-menu" role="menu">
         <a class="dropdown-item" href="Claude-Code-101.pdf" download="Claude Code 101.pdf" role="menuitem">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="M5 13l7 7 7-7"/><line x1="5" y1="21" x2="19" y2="21"/></svg>
+          <div class="item-dot"></div>
           <div class="dropdown-item-label">
-            Claude Code 101
-            <div class="dropdown-item-sub">Begynderguide &middot; 4 sider</div>
+            <div class="item-title-row">Claude Code 101 <span class="item-badge badge-begynder">Begynder</span></div>
+            <div class="dropdown-item-sub">Kom i gang med Claude Code</div>
           </div>
+          <svg class="dropdown-item-download" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="M5 13l7 7 7-7"/><line x1="5" y1="21" x2="19" y2="21"/></svg>
+        </a>
+        <a class="dropdown-item" href="Skills-i-Claude-Code.pdf" download="Intro Guide Til Skills i Claude Code.pdf" role="menuitem">
+          <div class="item-dot"></div>
+          <div class="dropdown-item-label">
+            <div class="item-title-row">Intro Guide Til Skills <span class="item-badge badge-medium">Medium</span></div>
+            <div class="dropdown-item-sub">Brug skills i Claude Code</div>
+          </div>
+          <svg class="dropdown-item-download" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="M5 13l7 7 7-7"/><line x1="5" y1="21" x2="19" y2="21"/></svg>
         </a>
         <a class="dropdown-item" href="Subagenter-i-Claude-Code.pdf" download="Intro Guide Til Subagenter i Claude Code.pdf" role="menuitem">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="M5 13l7 7 7-7"/><line x1="5" y1="21" x2="19" y2="21"/></svg>
+          <div class="item-dot"></div>
           <div class="dropdown-item-label">
-            Intro Guide Til Subagenter
-            <div class="dropdown-item-sub">Avanceret guide</div>
+            <div class="item-title-row">Intro Guide Til Subagenter <span class="item-badge badge-medium">Medium</span></div>
+            <div class="dropdown-item-sub">Brug subagenter i Claude Code</div>
           </div>
+          <svg class="dropdown-item-download" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="M5 13l7 7 7-7"/><line x1="5" y1="21" x2="19" y2="21"/></svg>
         </a>
       </div>
     </div>
@@ -334,18 +413,28 @@
         </button>
         <div class="dropdown-menu" role="menu">
           <a class="dropdown-item" href="Claude-Code-101.pdf" download="Claude Code 101.pdf" role="menuitem">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="M5 13l7 7 7-7"/><line x1="5" y1="21" x2="19" y2="21"/></svg>
+            <div class="item-dot"></div>
             <div class="dropdown-item-label">
-              Claude Code 101
-              <div class="dropdown-item-sub">Begynderguide &middot; 4 sider</div>
+              <div class="item-title-row">Claude Code 101 <span class="item-badge badge-begynder">Begynder</span></div>
+              <div class="dropdown-item-sub">Kom i gang med Claude Code</div>
             </div>
+            <svg class="dropdown-item-download" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="M5 13l7 7 7-7"/><line x1="5" y1="21" x2="19" y2="21"/></svg>
+          </a>
+          <a class="dropdown-item" href="Skills-i-Claude-Code.pdf" download="Intro Guide Til Skills i Claude Code.pdf" role="menuitem">
+            <div class="item-dot"></div>
+            <div class="dropdown-item-label">
+              <div class="item-title-row">Intro Guide Til Skills <span class="item-badge badge-medium">Medium</span></div>
+              <div class="dropdown-item-sub">Brug skills i Claude Code</div>
+            </div>
+            <svg class="dropdown-item-download" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="M5 13l7 7 7-7"/><line x1="5" y1="21" x2="19" y2="21"/></svg>
           </a>
           <a class="dropdown-item" href="Subagenter-i-Claude-Code.pdf" download="Intro Guide Til Subagenter i Claude Code.pdf" role="menuitem">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="M5 13l7 7 7-7"/><line x1="5" y1="21" x2="19" y2="21"/></svg>
+            <div class="item-dot"></div>
             <div class="dropdown-item-label">
-              Intro Guide Til Subagenter
-              <div class="dropdown-item-sub">Avanceret guide</div>
+              <div class="item-title-row">Intro Guide Til Subagenter <span class="item-badge badge-medium">Medium</span></div>
+              <div class="dropdown-item-sub">Brug subagenter i Claude Code</div>
             </div>
+            <svg class="dropdown-item-download" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="M5 13l7 7 7-7"/><line x1="5" y1="21" x2="19" y2="21"/></svg>
           </a>
         </div>
       </div>
@@ -356,10 +445,6 @@
 
   <!-- STATS -->
   <div class="stats">
-    <div class="stat-card">
-      <div class="stat-num">4</div>
-      <div class="stat-label">Sider med viden</div>
-    </div>
     <div class="stat-card">
       <div class="stat-num">100%</div>
       <div class="stat-label">Gratis</div>
@@ -376,6 +461,8 @@
 
   <footer>
     Lavet med ♡ af Storm Larsen
+    <span class="footer-sep">·</span>
+    Spørgsmål? Skriv til <a href="mailto:sl@e-opinion.dk">sl@e-opinion.dk</a>
   </footer>
 
   <script>

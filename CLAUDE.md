@@ -8,14 +8,20 @@ Single-file static landing page for the "Claude Code 101" PDF guide. Hosted on G
 
 ## Architecture
 
-The site consists of two files — no build step, no dependencies, no bundler:
+The site consists of four files — no build step, no dependencies, no bundler:
 
-- `index.html` — the landing page (~7 KB)
-- `Claude-Code-101.pdf` — the guide, served as a separate file (~162 KB)
+- `index.html` — the landing page
+- `Claude-Code-101.pdf` — beginner guide
+- `Skills-i-Claude-Code.pdf` — skills guide (medium level)
+- `Subagenter-i-Claude-Code.pdf` — subagents guide (medium level)
 
-Download links use `<a href="Claude-Code-101.pdf" download="Claude Code 101.pdf">`. The PDF was previously embedded as a base64 data URI, but that approach was dropped because iOS Safari blocks data URI downloads.
+Download links use `<a href="Claude-Code-101.pdf" download="Claude Code 101.pdf">`. The PDFs were previously embedded as base64 data URIs, but that approach was dropped because iOS Safari blocks data URI downloads.
 
 On iPhone/iPad a JavaScript snippet detects iOS and shows a hint below the download button: *"PDF åbnes i Safari — tryk på Del-ikonet (□↑) og vælg 'Gem i Filer'"*. This is unavoidable — iOS Safari opens same-origin PDFs inline regardless of the `download` attribute.
+
+The dropdown menu uses colored dot icons and level badges (Begynder = green, Medium = amber) per guide item.
+
+Footer includes a contact link: `sl@e-opinion.dk`.
 
 ## Deploying changes
 
